@@ -1,0 +1,14 @@
+App\Entity\Floor:
+  attributes:
+    id:
+      groups: [ 'item:output', 'collection:output' ]
+    boundaryPoints:
+      groups: [ 'item:output', 'collection:output', 'create:input' ]
+    mullions:
+      groups: [ 'item:output', 'collection:output', 'create:input' ]
+    corridorPolygons:
+      groups: [ 'item:output', 'collection:output', 'create:input' ]
+    rooms:
+      groups: [ 'item:output', 'collection:output', 'create:input' ]
+    structures:
+      groups: [ 'item:output', 'collection:output', 'create:input' ]

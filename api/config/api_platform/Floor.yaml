@@ -1,0 +1,24 @@
+App\Entity\Floor:
+  properties:
+    id:
+      identifier: true
+  collectionOperations:
+    get:
+      normalization_context:
+        groups: [ 'collection:output' ]
+    post:
+      denormalization_context:
+        groups: [ 'create:input' ]
+
+  itemOperations:
+    get:
+      normalization_context:
+        groups: [ 'item:output' ]
+
+  graphql:
+    collection_query:
+      normalization_context:
+        groups: [ 'collection:output' ]
+    item_query:
+      normalization_context:
+        groups: [ 'item:output' ]

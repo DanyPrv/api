@@ -1,0 +1,8 @@
+App\Entity\CorridorPolygon:
+  attributes:
+    id:
+      groups: [ 'item:output', 'collection:output' ]
+    boundaries:
+      groups: [ 'item:output', 'collection:output', 'create:input' ]
+    holes:
+      groups: [ 'item:output', 'collection:output', 'create:input' ]

@@ -1,0 +1,19 @@
+App\Entity\Room:
+  attributes:
+    id:
+      groups: [ 'item:output', 'collection:output' ]
+    type:
+      groups: [ 'item:output', 'collection:output', 'create:input' ]
+    category:
+      groups: [ 'item:output', 'collection:output', 'create:input' ]
+    intractable:
+      groups: [ 'item:output', 'collection:output', 'create:input' ]
+    points:
+      max_depth: 0
+      groups: [ 'item:output', 'collection:output', 'create:input' ]
+    innerPoints:
+      groups: [ 'item:output', 'collection:output', 'create:input' ]
+    revitPoints:
+      groups: [ 'item:output', 'collection:output', 'create:input' ]
+    furnitures:
+      groups: [ 'item:output', 'collection:output', 'create:input' ]

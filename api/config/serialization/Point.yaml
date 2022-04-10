@@ -1,0 +1,6 @@
+App\Entity\Point:
+  attributes:
+    x:
+      groups: [ 'item:output', 'collection:output', 'create:input' ]
+    y:
+      groups: [ 'item:output', 'collection:output', 'create:input' ]

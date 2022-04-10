@@ -1,0 +1,6 @@
+App\Entity\Structure:
+  attributes:
+    id:
+      groups: [ 'item:output', 'collection:output' ]
+    points:
+      groups: [ 'item:output', 'collection:output', 'create:input' ]
