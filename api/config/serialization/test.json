@@ -966,7 +966,7 @@
           "y": 173.014730878554
         }
       ],
-      "furniture": [
+      "furnitures": [
         {
           "furnitureType": "door",
           "points": [
@@ -1118,7 +1118,7 @@
           "y": 175.014730878554
         }
       ],
-      "furniture": [
+      "furnitures": [
         {
           "furnitureType": "door",
           "points": [
@@ -1311,7 +1311,7 @@
           "y": 245.978462614283
         }
       ],
-      "furniture": [
+      "furnitures": [
         {
           "furnitureType": "door",
           "points": [
@@ -1938,7 +1938,7 @@
           "y": 519.1677510351882
         }
       ],
-      "furniture": [
+      "furnitures": [
         {
           "furnitureType": "door",
           "points": [
@@ -2125,7 +2125,7 @@
           "y": 311.889929499958
         }
       ],
-      "furniture": [
+      "furnitures": [
         {
           "furnitureType": "door",
           "points": [
@@ -2509,7 +2509,7 @@
           "y": 401.094700999956
         }
       ],
-      "furniture": [
+      "furnitures": [
         {
           "furnitureType": "door",
           "points": [
@@ -2661,7 +2661,7 @@
           "y": 521.167751032119
         }
       ],
-      "furniture": [
+      "furnitures": [
         {
           "furnitureType": "door",
           "points": [
@@ -2826,7 +2826,7 @@
           "y": 473.254157022748
         }
       ],
-      "furniture": [
+      "furnitures": [
         {
           "furnitureType": "door",
           "points": [
@@ -3140,7 +3140,7 @@
           "y": 653.063340999956
         }
       ],
-      "furniture": [
+      "furnitures": [
         {
           "furnitureType": "door",
           "points": [
@@ -3340,7 +3340,7 @@
           "y": 724.716923002359
         }
       ],
-      "furniture": [
+      "furnitures": [
         {
           "furnitureType": "door",
           "points": [
@@ -3532,7 +3532,7 @@
           "y": 816.3862138710681
         }
       ],
-      "furniture": [
+      "furnitures": [
         {
           "furnitureType": "door",
           "points": [
@@ -3776,7 +3776,7 @@
           "y": 866.386213871046
         }
       ],
-      "furniture": [
+      "furnitures": [
         {
           "furnitureType": "door",
           "points": [
