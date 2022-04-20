@@ -118,6 +118,8 @@
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/phpstan/phpdoc-parser" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/proxy-manager-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/webonyx/graphql-php" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/lexik/jwt-authentication-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/namshi/jose" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

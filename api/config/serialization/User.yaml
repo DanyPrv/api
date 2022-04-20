@@ -1,0 +1,10 @@
+App\Entity\User:
+    attributes:
+        id:
+            groups: [ 'public:output' ]
+        email:
+            groups: [ 'public:output' ]
+        roles:
+            groups: [ 'public:output' ]
+        username:
+            groups: [ 'public:output' ]

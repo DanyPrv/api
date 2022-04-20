@@ -115,6 +115,8 @@
       <path value="$PROJECT_DIR$/api/vendor/phpstan/phpdoc-parser" />
       <path value="$PROJECT_DIR$/api/vendor/symfony/proxy-manager-bridge" />
       <path value="$PROJECT_DIR$/api/vendor/webonyx/graphql-php" />
+      <path value="$PROJECT_DIR$/api/vendor/lexik/jwt-authentication-bundle" />
+      <path value="$PROJECT_DIR$/api/vendor/namshi/jose" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />

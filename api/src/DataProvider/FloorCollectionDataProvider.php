@@ -5,8 +5,8 @@ namespace App\DataProvider;
 use ApiPlatform\Core\DataProvider\ContextAwareCollectionDataProviderInterface;
 use ApiPlatform\Core\DataProvider\RestrictedDataProviderInterface;
 use App\Entity\Floor;
+use App\Iterators\ArrayPaginatorEditable;
 use App\Repository\FloorRepository;
-use Doctrine\Common\Collections\ArrayCollection;
 
 final class FloorCollectionDataProvider implements ContextAwareCollectionDataProviderInterface, RestrictedDataProviderInterface
 {
@@ -19,6 +19,8 @@ final class FloorCollectionDataProvider implements ContextAwareCollectionDataPro
 
     public function getCollection(string $resourceClass, string $operationName = null, array $context = []): iterable
     {
-        return new ArrayCollection($this->repository->findAll());
+        $records = $this->repository->findAll();
+        return new ArrayPaginatorEditable($records, 0, count($records), count($records));
+
     }
 }
