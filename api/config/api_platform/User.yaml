@@ -1,0 +1,29 @@
+App\Entity\User:
+  properties:
+    id:
+      identifier: true
+  collectionOperations:
+    get:
+      security: 'is_granted("ROLE_ADMIN")'
+      normalization_context:
+        groups: [ 'collection:output' ]
+    post:
+      security: 'is_granted("ROLE_ADMIN")'
+      denormalization_context:
+        groups: [ 'create:input' ]
+
+  itemOperations:
+    get:
+      security: 'is_granted("ROLE_ADMIN")'
+      normalization_context:
+        groups: [ 'item:output' ]
+
+  graphql:
+    collection_query:
+      security: 'is_granted("ROLE_ADMIN")'
+      normalization_context:
+        groups: [ 'collection:output' ]
+    item_query:
+      security: 'is_granted("ROLE_ADMIN")'
+      normalization_context:
+        groups: [ 'item:output' ]

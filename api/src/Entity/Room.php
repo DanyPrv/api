@@ -41,12 +41,16 @@ class Room
     #[ORM\ManyToOne(targetEntity: Floor::class, inversedBy: 'rooms')]
     private $floor;
 
+    #[ORM\OneToMany(mappedBy: 'room', targetEntity: User::class)]
+    private $users;
+
     public function __construct()
     {
         $this->points = new ArrayCollection();
         $this->innerPoints = new ArrayCollection();
         $this->revitPoints = new ArrayCollection();
         $this->furnitures = new ArrayCollection();
+        $this->users = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -218,6 +222,36 @@ class Room
     public function setFloor(?Floor $floor): self
     {
         $this->floor = $floor;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|User[]
+     */
+    public function getUsers(): Collection
+    {
+        return $this->users;
+    }
+
+    public function addUser(User $user): self
+    {
+        if (!$this->users->contains($user)) {
+            $this->users[] = $user;
+            $user->setRoom($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUser(User $user): self
+    {
+        if ($this->users->removeElement($user)) {
+            // set the owning side to null (unless already changed)
+            if ($user->getRoom() === $this) {
+                $user->setRoom(null);
+            }
+        }
 
         return $this;
     }

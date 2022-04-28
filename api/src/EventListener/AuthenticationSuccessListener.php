@@ -27,7 +27,7 @@ final class AuthenticationSuccessListener
         $publicUserData = $this->serializer->serialize(
                 $user,
                 'json',
-                ['groups' => 'public:output']
+                ['groups' => 'login:output']
             );
         $data['user'] = json_decode($publicUserData, true);
         $event->setData($data);
