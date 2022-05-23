@@ -1,16 +1,16 @@
 App\Entity\User:
   attributes:
     id:
-      groups: [ 'login:output', 'item:output', 'collection:output', 'create:input' ]
+      groups: [ 'login:output', 'item:output', 'user_collection:output', 'create:input', 'update:input' ]
     email:
-      groups: [ 'login:output', 'item:output', 'collection:output', 'create:input' ]
+      groups: [ 'login:output', 'item:output', 'user_collection:output', 'create:input', 'update:input' ]
     roles:
-      groups: [ 'login:output', 'item:output', 'collection:output', 'create:input' ]
+      groups: [ 'login:output', 'item:output', 'create:input' ]
     username:
-      groups: [ 'login:output', 'item:output', 'collection:output', 'create:input' ]
+      groups: [ 'login:output', 'item:output', 'user_collection:output', 'create:input', 'update:input' ]
     room:
-      groups: [ 'login:output', 'item:output', 'collection:output', 'create:input' ]
-    plainPassword:
-      groups: [ 'create:input' ]
+      groups: [ 'login:output', 'item:output', 'user_collection:output', 'create:input', 'update:input' ]
     active:
+      groups: [ 'create:input', 'item:output', 'user_collection:output', 'update:input' ]
+    plainPassword:
       groups: [ 'create:input' ]
