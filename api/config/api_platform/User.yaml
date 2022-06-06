@@ -5,6 +5,7 @@ App\Entity\User:
   collectionOperations:
     get:
       security: 'is_granted("ROLE_ADMIN")'
+      filters: ['user.roomFilter']
       normalization_context:
         groups: [ 'user_collection:output' ]
     post:

@@ -1,0 +1,10 @@
+App\Entity\Resource:
+  attributes:
+    id:
+      groups: [ 'resourceItem:output', 'resourceCollection:output', 'resourceCreate:input', 'resourceUpdate:input' ]
+    ip:
+      groups: [ 'resourceItem:output', 'resourceCollection:output', 'resourceCreate:input', 'resourceUpdate:input' ]
+    name:
+      groups: [ 'resourceItem:output', 'resourceCollection:output', 'resourceCreate:input', 'resourceUpdate:input' ]
+    owner:
+      groups: [ 'resourceItem:output', 'resourceCollection:output', 'resourceCreate:input', 'resourceUpdate:input' ]

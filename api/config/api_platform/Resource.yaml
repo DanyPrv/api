@@ -1,0 +1,24 @@
+App\Entity\Resource:
+  properties:
+    id:
+      identifier: true
+  collectionOperations:
+    get:
+      normalization_context:
+        groups: [ 'resourceCollection:output' ]
+      filters: [ 'resource.userFilter' ]
+    post:
+      security: 'is_granted("ROLE_ADMIN")'
+      denormalization_context:
+        groups: [ 'resourceCreate:input' ]
+
+  itemOperations:
+    get:
+      normalization_context:
+        groups: [ 'resourceItem:output' ]
+    patch:
+      security: 'is_granted("ROLE_ADMIN")'
+      denormalization_context:
+        groups: [ 'resourceUpdate:input' ]
+    delete:
+      security: 'is_granted("ROLE_ADMIN")'
