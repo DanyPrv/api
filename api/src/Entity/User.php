@@ -43,9 +43,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'owner', targetEntity: Resource::class)]
     private $resources;
 
+    #[ORM\OneToMany(mappedBy: 'owner', targetEntity: HardwareRequest::class)]
+    private $hardwareRequests;
+
     public function __construct()
     {
         $this->resources = new ArrayCollection();
+        $this->hardwareRequests = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -190,6 +194,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
             // set the owning side to null (unless already changed)
             if ($resource->getOwner() === $this) {
                 $resource->setOwner(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|HardwareRequest[]
+     */
+    public function getHardwareRequests(): Collection
+    {
+        return $this->hardwareRequests;
+    }
+
+    public function addHardwareRequest(HardwareRequest $hardwareRequest): self
+    {
+        if (!$this->hardwareRequests->contains($hardwareRequest)) {
+            $this->hardwareRequests[] = $hardwareRequest;
+            $hardwareRequest->setOwner($this);
+        }
+
+        return $this;
+    }
+
+    public function removeHardwareRequest(HardwareRequest $hardwareRequest): self
+    {
+        if ($this->hardwareRequests->removeElement($hardwareRequest)) {
+            // set the owning side to null (unless already changed)
+            if ($hardwareRequest->getOwner() === $this) {
+                $hardwareRequest->setOwner(null);
             }
         }
 

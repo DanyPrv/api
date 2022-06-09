@@ -24,6 +24,9 @@ class Resource
     #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'resources')]
     private $owner;
 
+    #[ORM\ManyToOne(targetEntity: HardwareRequest::class, inversedBy: 'resource')]
+    private $hardwareRequest;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -61,6 +64,18 @@ class Resource
     public function setOwner(?User $owner): self
     {
         $this->owner = $owner;
+
+        return $this;
+    }
+
+    public function getHardwareRequest(): ?HardwareRequest
+    {
+        return $this->hardwareRequest;
+    }
+
+    public function setHardwareRequest(?HardwareRequest $hardwareRequest): self
+    {
+        $this->hardwareRequest = $hardwareRequest;
 
         return $this;
     }

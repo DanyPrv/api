@@ -47,4 +47,17 @@ class ResourceRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    /**
+     * @return Request[] Returns an array of HardwareRequest objects
+     */
+    public function findByUserField($value)
+    {
+        return $this->createQueryBuilder('h')
+            ->andWhere('h.owner = :val')
+            ->setParameter('val', $value)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 }

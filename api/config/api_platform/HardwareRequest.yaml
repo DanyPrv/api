@@ -1,0 +1,22 @@
+App\Entity\HardwareRequest:
+  properties:
+    id:
+      identifier: true
+  collectionOperations:
+    get:
+      normalization_context:
+        groups: [ 'hardwareRequestCollection:output' ]
+    post:
+      denormalization_context:
+        groups: [ 'hardwareRequestCreate:input' ]
+
+  itemOperations:
+    get:
+      normalization_context:
+        groups: [ 'hardwareRequestItem:output' ]
+    patch:
+      denormalization_context:
+        groups: [ 'hardwareRequestUpdate:input' ]
+
+    delete:
+      security: 'is_granted("ROLE_ADMIN")'  

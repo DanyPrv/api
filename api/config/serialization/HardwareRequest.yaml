@@ -1,0 +1,12 @@
+App\Entity\HardwareRequest:
+  attributes:
+    id:
+      groups: [ 'hardwareRequestItem:output', 'hardwareRequestCollection:output', 'hardwareRequestCreate:input', 'hardwareRequestUpdate:input' ]
+    name:
+      groups: [ 'hardwareRequestItem:output', 'hardwareRequestCollection:output', 'hardwareRequestCreate:input', 'hardwareRequestUpdate:input' ]
+    description:
+      groups: [ 'hardwareRequestItem:output', 'hardwareRequestCollection:output', 'hardwareRequestCreate:input', 'hardwareRequestUpdate:input' ]
+    status:
+      groups: [ 'hardwareRequestItem:output', 'hardwareRequestCollection:output', 'hardwareRequestCreate:input', 'hardwareRequestUpdate:input' ]
+    owner:
+          groups: [ 'hardwareRequestItem:output', 'hardwareRequestCollection:output', 'hardwareRequestCreate:input', 'hardwareRequestUpdate:input' ]
