@@ -17,11 +17,11 @@ App\Entity\User:
       normalization_context:
         groups: [ 'item:output' ]
     patch:
-      security: 'is_granted("ROLE_ADMIN")'
       denormalization_context:
         groups: [ 'update:input' ]
     delete:
       security: 'is_granted("ROLE_ADMIN")'
+    
 
   graphql:
     collection_query:

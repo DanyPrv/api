@@ -21,16 +21,22 @@ class Resource
     #[ORM\Column(type: 'string', length: 255)]
     private $name;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
     #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'resources')]
     private $owner;
 
     #[ORM\ManyToOne(targetEntity: HardwareRequest::class, inversedBy: 'resource')]
     private $hardwareRequest;
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $description;
+
+    #[ORM\Column(type: 'datetime', nullable: true)]
+    private $creationDate;
 
     public function getIp(): ?string
     {
@@ -76,6 +82,38 @@ class Resource
     public function setHardwareRequest(?HardwareRequest $hardwareRequest): self
     {
         $this->hardwareRequest = $hardwareRequest;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getCreationDate(): ?\DateTimeInterface
+    {
+        if( null === $this->creationDate) {
+            $this->setCreationDate();
+        }
+
+        return $this->creationDate;
+    }
+
+    public function setCreationDate(?\DateTimeInterface $creationDate = null): self
+    {
+        if( null === $creationDate ){
+            $this->creationDate = new \DateTime('now');
+        } else {
+            $this->creationDate = $creationDate;
+        }
 
         return $this;
     }

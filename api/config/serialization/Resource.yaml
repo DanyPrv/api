@@ -8,3 +8,7 @@ App\Entity\Resource:
       groups: [ 'resourceItem:output', 'resourceCollection:output', 'resourceCreate:input', 'resourceUpdate:input' ]
     owner:
       groups: [ 'resourceItem:output', 'resourceCollection:output', 'resourceCreate:input', 'resourceUpdate:input' ]
+    description:
+      groups: [ 'resourceItem:output', 'resourceCollection:output', 'resourceCreate:input', 'resourceUpdate:input' ]
+    creationDate:
+      groups: [ 'resourceItem:output', 'resourceCollection:output' ]
