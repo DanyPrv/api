@@ -5,7 +5,7 @@ App\Entity\User:
     email:
       groups: [ 'login:output', 'item:output', 'user_collection:output', 'create:input', 'update:input' ]
     roles:
-      groups: [ 'login:output', 'item:output', 'create:input' ]
+      groups: [ 'login:output', 'item:output', 'create:input', 'update:input' ]
     username:
       groups: [ 'login:output', 'item:output', 'user_collection:output', 'create:input', 'update:input' ]
     firstName:
