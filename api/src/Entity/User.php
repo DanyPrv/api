@@ -40,10 +40,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\ManyToOne(targetEntity: Room::class, inversedBy: 'users')]
     private $room;
 
-    #[ORM\OneToMany(mappedBy: 'owner', targetEntity: Resource::class)]
+    #[ORM\OneToMany(mappedBy: 'owner', targetEntity: Resource::class, cascade: ['remove'])]
     private $resources;
 
-    #[ORM\OneToMany(mappedBy: 'owner', targetEntity: HardwareRequest::class)]
+    #[ORM\OneToMany(mappedBy: 'owner', targetEntity: HardwareRequest::class, cascade: ['remove']    )]
     private $hardwareRequests;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
